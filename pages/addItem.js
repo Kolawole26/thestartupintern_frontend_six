@@ -5,7 +5,7 @@ import { server } from '../config'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
-function addItem({secondLinks, futureDate, title, details, setFutureDate, setTitle, setDetails, errorSubmit, setErrorSubmit}) {
+function AddItem({secondLinks, futureDate, title, details, setFutureDate, setTitle, setDetails, errorSubmit, setErrorSubmit}) {
 
     const [dateWarn, setDateWarn] = useState(false);
 
@@ -77,4 +77,4 @@ function addItem({secondLinks, futureDate, title, details, setFutureDate, setTit
     )
 }
 
-export default addItem
+export default AddItem

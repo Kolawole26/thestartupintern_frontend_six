@@ -7,7 +7,7 @@ import dateFormat from "dateformat";
 import Cookies from 'js-cookie'
 import { useRouter } from 'next/router'
 
-function editItem({secondLinks, post, errorSubmit, setErrorSubmit
+function EditItem({secondLinks, post, errorSubmit, setErrorSubmit
 }) {
     
     const [editTitle, setEditTitle] = useState("");
@@ -124,4 +124,4 @@ export const getServerSideProps = async (context) => {
   }
   
 
-export default editItem
+export default EditItem

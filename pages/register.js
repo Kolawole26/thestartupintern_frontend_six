@@ -5,7 +5,7 @@ import { server } from '../config'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
-function register({firstLinks, fullname, setFullname, email, setEmail, password, setPassword, errorFullname, errorEmail, errorPassword, errorRegister, setErrorRegister, checkInputs}) {
+function Register({firstLinks, fullname, setFullname, email, setEmail, password, setPassword, errorFullname, errorEmail, errorPassword, errorRegister, setErrorRegister, checkInputs}) {
 
     useEffect(() => {
         firstLinks()
@@ -68,4 +68,4 @@ function register({firstLinks, fullname, setFullname, email, setEmail, password,
     )
 }
 
-export default register
+export default Register

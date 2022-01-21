@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import Cookies from 'js-cookie'
 
-function singlemomment({secondLinks, post}) {
+function SingleMomment({secondLinks, post}) {
 
   useEffect(() => {
     secondLinks()
@@ -94,4 +94,4 @@ const post = await response.data.data
 }
 
 
-export default singlemomment
+export default SingleMomment

@@ -7,7 +7,7 @@ import {parseCookies} from '../lib/parseCookies.js'
 import Feed from '../Components/Feed'
 import Cookies from 'js-cookie'
 
-function buckets({secondLinks, posts, user, setUser, }) {
+function Buckets({secondLinks, posts, user, setUser, }) {
   
 
 useEffect(() => {
@@ -107,4 +107,4 @@ export const getServerSideProps = async (context) => {
 
 
 
-export default buckets
+export default Buckets

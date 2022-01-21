@@ -4,7 +4,7 @@ import { server } from '../config'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
-function forgetPassword({ errorForget, setErrorForget, email, setEmail, errorEmail, checkInputs}) {
+function ForgetPassword({ errorForget, setErrorForget, email, setEmail, errorEmail, checkInputs}) {
     
     const router = useRouter()
 
@@ -45,5 +45,5 @@ function forgetPassword({ errorForget, setErrorForget, email, setEmail, errorEma
         </>;
 }
 
-export default forgetPassword;
+export default ForgetPassword;
 
