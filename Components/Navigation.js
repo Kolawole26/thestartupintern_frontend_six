@@ -1,26 +1,12 @@
 import ReorderIcon from '@mui/icons-material/Reorder';
 import Link from 'next/link';
-import { useState } from 'react';
+
 
 
 
 function Navigation( {onClick, active, links} ) {
 
-    // const [active, setActive] = useState(false);
-    // const [links, setLinks] = useState(true);
-
-    // const onClick = () => {
-    //     setActive(!active);
-    // };
-
     
-  
-    // const firstLinks = () => {
-    //         setLinks(true)
-    // }
-    // const secondLinks = () => {
-    //         setLinks(false)
-    // }
 
     return (
         <>

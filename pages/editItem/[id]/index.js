@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Meta from '../../../Components/Meta'
 import axios from 'axios'
 import { server } from '../../../config'
-import {parseCookies} from '../../../lib/parseCookies.js'
+import {parseCookies} from '../../../libs/parseCookies.js'
 import dateFormat from "dateformat";
 import Cookies from 'js-cookie'
 import { useRouter } from 'next/router'

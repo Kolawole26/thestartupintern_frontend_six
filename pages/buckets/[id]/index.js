@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import Meta from '../../../Components/Meta'
 import axios from 'axios'
 import { server } from '../../../config'
-import {parseCookies} from '../../../lib/parseCookies.js'
-import dateFormat from "dateformat";
+import {parseCookies} from '../../../libs/parseCookies.js'
+import dateFormat from 'dateformat'
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import Cookies from 'js-cookie'

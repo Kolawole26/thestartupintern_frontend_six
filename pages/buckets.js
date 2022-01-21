@@ -3,7 +3,7 @@ import Meta from '../Components/Meta'
 import axios from 'axios'
 import Link from 'next/link'
 import { server } from '../config'
-import {parseCookies} from '../lib/parseCookies.js'
+import {parseCookies} from '../libs/parseCookies.js'
 import Feed from '../Components/Feed'
 import Cookies from 'js-cookie'
 
@@ -60,7 +60,7 @@ useEffect(() => {
                         } ) }
                         </div>
                         <div>
-                        <Link href='/addItem'><button className="bg-btn p-3 mx-auto md:w-44 w-36 rounded-lg  text-white  hover:bg-blue-500 transition ease-in-out duration-300">Add Item</button></Link>
+                        <Link href='/addItem' passHref ><button className="bg-btn p-3 mx-auto md:w-44 w-36 rounded-lg  text-white  hover:bg-blue-500 transition ease-in-out duration-300">Add Item</button></Link>
                         </div>
                         
                         </div>
