@@ -54,7 +54,7 @@ function SingleMomment({secondLinks, post}) {
                             
                         </div>
                         <div className="flex md:flex-row flex-col md:space-x-3 space-x-0 md:space-y-0 space-y-3 ">
-                            <Link href={`/editItem/${post._id}`}><button className="bg-cyan p-3  md:w-44 w-full rounded-lg text-white  hover:bg-green-600 transition ease-in-out duration-300">Edit</button></Link>
+                            <Link href={`/editItem/${post._id}`} passHref><button className="bg-cyan p-3  md:w-44 w-full rounded-lg text-white  hover:bg-green-600 transition ease-in-out duration-300">Edit</button></Link>
                             <button className="bg-danger p-3 mx-auto rounded-lg text-white md:w-44 w-full hover:bg-red-700 transition ease-in-out duration-300" onClick={() => handleDelete(post._id)}>Delete</button>
                         </div>
                     </section>

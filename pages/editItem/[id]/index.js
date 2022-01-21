@@ -37,7 +37,7 @@ function EditItem({secondLinks, post, errorSubmit, setErrorSubmit
             setEditDetails(post.details);
             setEditFutureDate(myDate);
       
-    }, []);
+    }, [myDate, post.title, post.details]);
 
     const handleEdit = async (id) => {
  
