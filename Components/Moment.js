@@ -16,7 +16,7 @@ function Moment({post}) {
                                         </p>
                                             
                                             <div className="flex flex-col md:flex-row justify-between text-center md:text-left space-y-2 md:space-y-0 mb-3">
-                                            <Link href={`/buckets/${data._id}`} passHref className= "text-btn text-sm">View Details</Link>
+                                            <Link href={`/buckets/${data._id}`} passHref ><a className= "text-btn text-sm">View Details</a></Link>
                                             <div className="flex flex-col md:flex-row md:space-x-11 space-y-2 md:space-y-0">
                                                     <p className="text-ash text-sm">20/05/2021</p>
                                                     <p className="text-sm">{dateFormat(date, "dd/mm/yyyy")}</p>
