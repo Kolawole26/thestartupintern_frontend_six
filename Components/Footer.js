@@ -3,8 +3,8 @@ import React from 'react'
 function Footer() {
     return (
         <div>
-            <footer className=" py-7 px-9 ">
-                <p className="md:text-right text-center md:text-xl">Eventful Moments by Kolawole</p>   
+            <footer>
+                <p className="nav">Eventful Moments by Kolawole</p>   
             </footer>
         </div>
     )
