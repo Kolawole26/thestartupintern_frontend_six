@@ -10,7 +10,7 @@ function Navigation( {onClick, active, links} ) {
 
     return (
         <>
-           <header className="relative bg-primary py-3">
+           <header >
                <div className=" mx-auto max-w-7xl flex items-center justify-between py-2.5 md:px-12 px-9">
                    <div className="">
                        <h1 className="text-white font-bold md:text-xl italic">Eventful Momemts.</h1>

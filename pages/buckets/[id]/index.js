@@ -42,10 +42,10 @@ function SingleMomment({secondLinks, post}) {
             <Meta title='Single Bucket'/>
            <div className="md:container  md:mx-auto md:min-h-screen" >
                 <div className=" my-24 px-9 max-w-7xl mx-auto">
-                    <header className=" mb-11">
+                    <div className=" mb-11">
                         <h1 className="md:text-4xl font-bold text-2xl mb-4">{post.title}</h1>
                         <p className="text-btn text-sm">{dateFormat(date, "dd/mm/yyyy")}</p> 
-                    </header>
+                    </div>
                     <section>
                         <div className="space-y-7 mb-20 md:text-justify">
                             <p className="md:text-base text-sm">

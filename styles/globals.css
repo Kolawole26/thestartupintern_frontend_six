@@ -12,6 +12,13 @@
         @apply py-7;
         @apply px-9
     }
+
+    header {
+        @apply bg-primary;
+        @apply relative;
+        @apply py-3
+    }
+    
 }
 
 @layer utilities {
