@@ -5,5 +5,10 @@
 
 
 
-
+@layer base {
+    
+    footer {
+        @apply bg-secondary
+    }
+}
         

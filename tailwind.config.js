@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': "#008289",
+        primary: "#008289",
         secondary: "#60CED4",
         btn: "#5271FF",
         borderColor: "#707070",
@@ -16,7 +16,6 @@ module.exports = {
         yellowBg: "#FFF5A7",
       },
       fontFamily: {
-        // Poppins : ['Poppins', 'Sans-Serif'],
         sans: ['Poppins', 'sans-serif'],
       },
     },

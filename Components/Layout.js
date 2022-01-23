@@ -1,7 +1,7 @@
 import Meta from './Meta'
 import Footer from './Footer'
 function Layout({children}) {
-    
+ 
 
     return (
         <>
