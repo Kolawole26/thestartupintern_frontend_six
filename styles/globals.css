@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* purgecss end ignore */
+
 
 
 
@@ -32,3 +32,5 @@
     }
 }
         
+
+/* purgecss end ignore */
