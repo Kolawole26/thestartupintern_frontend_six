@@ -1,11 +1,14 @@
 import ReorderIcon from '@mui/icons-material/Reorder';
 import Link from 'next/link';
-
+import Cookies from 'js-cookie'
 
 
 
 function Navigation( {onClick, active, links} ) {
 
+    const RemoveCookie = () => {
+        Cookies.remove('user')
+    }
     
 
     return (
@@ -40,7 +43,7 @@ function Navigation( {onClick, active, links} ) {
                             <>
                                 <li className="list-none md:mr-5">
                                 <Link href='/'>
-                                <a className=" flex w-full text-base cursor-pointer pt-2.5 px-9 md:px-2.5 text-white">Logout</a>    
+                                <a className=" flex w-full text-base cursor-pointer pt-2.5 px-9 md:px-2.5 text-white" onClick={RemoveCookie}>Logout</a>    
                                 </Link>
                            </li>
                            <li className="list-none md:mr-5 ">

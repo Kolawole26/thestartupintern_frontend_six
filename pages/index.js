@@ -7,6 +7,7 @@ import axios from 'axios'
 import Cookies from 'js-cookie'
 import Popup from '../Components/Popup';
 
+
 export default function Home({firstLinks, email, setEmail, password, setPassword, errorEmail, errorPassword, errorLogin, setErrorLogin, checkInputs}) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -32,7 +33,7 @@ const togglePopup = () => {
   setIsOpen(!isOpen);
 }
 
-//  const router = useRouter()
+ 
 
  const LoginSubmit = async (e) => {
   e.preventDefault();
@@ -45,7 +46,6 @@ const togglePopup = () => {
     Cookies.set('user', JSON.stringify(response.data), { expires: 24, path: '/' })
     setErrorLogin("");
     togglePopup();
-    // router.push('/buckets');
   } catch (err) {
     console.log(`Error: ${err.message}`);
       setErrorLogin('Login failed, Please try again');
@@ -79,7 +79,7 @@ const togglePopup = () => {
                         <button className="bg-btn p-3 mx-auto rounded-lg text-white w-full hover:bg-blue-500 transition ease-in-out duration-300">Login</button>
                         {errorLogin && <span className=" text-xs text-red-600">{errorLogin}</span>}
 
-                        <h4 className="text-btn text-sm"><Link href='/forgetPassword'>Forget Password</Link></h4>
+                        <h4 className="text-btn text-sm"><Link href='/forgotPassword'>Forgot Password</Link></h4>
                         <h4 className="text-btn text-sm"><Link href='/register'>Sign up </Link> <ArrowRightAltIcon/></h4>
                     </form>
 

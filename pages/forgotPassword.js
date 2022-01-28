@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Meta from '../Components/Meta';
 import { server } from '../config'
 import axios from 'axios'
-import { useRouter } from 'next/router'
+import ForgotPopup from '../Components/ForgotPopup';
 
-function ForgetPassword({ errorForget, setErrorForget, email, setEmail, errorEmail, checkInputs}) {
+function ForgotPassword({ errorForget, setErrorForget, email, setEmail, errorEmail, checkInputs}) {
+  const [isOpenup, setIsOpenup] = useState(false);
     
-    const router = useRouter()
-
+    const togglePopupnow = () => {
+      setIsOpenup(!isOpenup);
+    }
     const ForgetPasswordSubmit = async (e) => {
         e.preventDefault();
         checkInputs();
@@ -16,8 +18,7 @@ function ForgetPassword({ errorForget, setErrorForget, email, setEmail, errorEma
           const response = await axios.post(`${server}/users/forgotPassword`, details);
           setEmail('');
           setErrorForget("")
-          alert('Token have been sent to your email!')  
-          router.push('/');
+          togglePopupnow() 
         } catch (err) {
           console.log(`Error: ${err.message}`);
             setErrorForget('failed, Please try again');
@@ -27,7 +28,7 @@ function ForgetPassword({ errorForget, setErrorForget, email, setEmail, errorEma
   return <>
             <Meta title='Forget Password Page'/>
             <div className="container max-w-screen-sm mx-auto md:min-h-screen h-screen">
-               <div className="a my-28 px-9 ">
+               <div className=" my-28 px-9 ">
                     <form className="space-y-7" onSubmit={ForgetPasswordSubmit}>
                         <div className="">
                         <label htmlFor="email" className="block mb-2 text-base">Email</label>
@@ -40,10 +41,18 @@ function ForgetPassword({ errorForget, setErrorForget, email, setEmail, errorEma
 
                         
                     </form>
+
+                    {isOpenup && <ForgotPopup
+                      content={<>
+                        <h2 className='uppercase mb-3 text-lg'>Forgot password</h2>
+                        <p>Token have been sent to your email!</p>
+                      </>}
+                    />}
+
                 </div>
             </div>    
         </>;
 }
 
-export default ForgetPassword;
+export default ForgotPassword;
 

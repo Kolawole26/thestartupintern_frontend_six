@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-function Popups({content}) {
+function ForgotPopup({content}) {
+    
   return <>
             <div className="fixed bg-light-black h-screen w-full  top-0 left-0 m-auto flex justify-center align-center z-20 ">
                 <div className="relative p-5 my-auto mx-auto h-auto max-h-70 bg-white rounded-lg border-4 border-solid overflow-auto object-center">
@@ -12,4 +13,5 @@ function Popups({content}) {
             </div>
         </>;
 }
-export default Popups;
+
+export default ForgotPopup;
