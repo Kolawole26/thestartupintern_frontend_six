@@ -42,7 +42,6 @@ export default function Home({firstLinks, email, setEmail, password, setPassword
     Cookies.set('user', JSON.stringify(response.data), { expires: 24, path: '/' })
     setErrorLogin("");
     router.push('/buckets');
-    alert('Welcome!!! You have succesfully Login')
   } catch (err) {
     console.log(`Error: ${err.message}`);
       setErrorLogin('Login failed, Please try again');

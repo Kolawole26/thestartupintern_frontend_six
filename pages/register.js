@@ -26,7 +26,6 @@ function Register({firstLinks, fullname, setFullname, email, setEmail, password,
           setPassword('');
           setErrorRegister("")
           router.push('/')
-          alert('You have succesfully Register')
         } catch (err) {
           console.log(`Error: ${err.message}`);
           setErrorRegister('Registration failed, Please try again');
