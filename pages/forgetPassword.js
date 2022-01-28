@@ -26,7 +26,7 @@ function ForgetPassword({ errorForget, setErrorForget, email, setEmail, errorEma
       }
   return <>
             <Meta title='Forget Password Page'/>
-            <div className="container max-w-screen-sm mx-auto md:min-h-screen">
+            <div className="container max-w-screen-sm mx-auto md:min-h-screen h-screen">
                <div className="a my-28 px-9 ">
                     <form className="space-y-7" onSubmit={ForgetPasswordSubmit}>
                         <div className="">
