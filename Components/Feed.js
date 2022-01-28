@@ -4,7 +4,7 @@ import Moment from './Moment.js'
 function Feed({posts}) {
     return (
         <>
-          <div className="md:min-h-screen">
+          <div className="md:min-h-screen h-screen">
            {posts.map((post, index) => {
               return <Moment post={post} key={index}/>
             })} 
