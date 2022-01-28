@@ -14,6 +14,7 @@ module.exports = {
         'danger': '#C34F06',
         'ash': '#B2B2B2',
         'yellowBg': '#FFF5A7',
+        'light-black': '#00000050',
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],

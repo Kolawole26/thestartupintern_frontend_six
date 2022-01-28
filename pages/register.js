@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Meta from '../Components/Meta';
 import { useEffect } from 'react';
 import { server } from '../config'
 import axios from 'axios'
-import { useRouter } from 'next/router'
+import Popups from '../Components/Popups';
+
 
 function Register({firstLinks, fullname, setFullname, email, setEmail, password, setPassword, errorFullname, errorEmail, errorPassword, errorRegister, setErrorRegister, checkInputs}) {
+  const [isOpens, setIsOpens] = useState(false);
 
     useEffect(() => {
         firstLinks()
 
      });
 
-     const router = useRouter()
+     const togglePopups = () => {
+      setIsOpens(!isOpens);
+    }
 
      const RegisterSubmit = async (e) => {
         e.preventDefault();
@@ -25,7 +29,7 @@ function Register({firstLinks, fullname, setFullname, email, setEmail, password,
           setEmail('');
           setPassword('');
           setErrorRegister("")
-          router.push('/')
+          togglePopups()
         } catch (err) {
           console.log(`Error: ${err.message}`);
           setErrorRegister('Registration failed, Please try again');
@@ -61,6 +65,14 @@ function Register({firstLinks, fullname, setFullname, email, setEmail, password,
                         <button className="bg-btn p-3 mx-auto rounded-lg text-white w-full hover:bg-blue-500 transition ease-in-out duration-300">Create</button>
                         {errorRegister && <span className=" text-xs text-red-600">{errorRegister}</span>}
                     </form>
+
+                    {isOpens && <Popups
+                      content={<>
+                        <h2 className='uppercase mb-3 text-lg'>Register</h2>
+                        <p> You have successfully register</p>
+                      </>}
+                    />}
+
                </div>
            </div>  
         </>

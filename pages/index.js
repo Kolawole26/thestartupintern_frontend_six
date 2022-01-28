@@ -1,14 +1,15 @@
 import Meta from '../Components/Meta';
 import Link from 'next/link';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { server } from '../config'
 import axios from 'axios'
 import Cookies from 'js-cookie'
-import { useRouter } from 'next/router'
+import Popup from '../Components/Popup';
 
 export default function Home({firstLinks, email, setEmail, password, setPassword, errorEmail, errorPassword, errorLogin, setErrorLogin, checkInputs}) {
-  
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     firstLinks()
 
@@ -27,9 +28,11 @@ export default function Home({firstLinks, email, setEmail, password, setPassword
   };
 }, []); // <-- run this effect once on mount
 
- 
+const togglePopup = () => {
+  setIsOpen(!isOpen);
+}
 
- const router = useRouter()
+//  const router = useRouter()
 
  const LoginSubmit = async (e) => {
   e.preventDefault();
@@ -41,7 +44,8 @@ export default function Home({firstLinks, email, setEmail, password, setPassword
     setPassword('');
     Cookies.set('user', JSON.stringify(response.data), { expires: 24, path: '/' })
     setErrorLogin("");
-    router.push('/buckets');
+    togglePopup();
+    // router.push('/buckets');
   } catch (err) {
     console.log(`Error: ${err.message}`);
       setErrorLogin('Login failed, Please try again');
@@ -54,7 +58,7 @@ export default function Home({firstLinks, email, setEmail, password, setPassword
       <Meta title='Login Page'/>
 
       <div className="container max-w-screen-sm mx-auto">
-               <div className="a my-28 px-9 ">
+               <div className=" my-28 px-9 ">
                 <h1 className="md:text-4xl font-bold text-3xl mb-3">Welcome back,</h1>
                 <p className="md:text-xl text-base mb-4">
                     Hi, my name is Eventful Moments, I am a bucket... no, not the 
@@ -78,7 +82,17 @@ export default function Home({firstLinks, email, setEmail, password, setPassword
                         <h4 className="text-btn text-sm"><Link href='/forgetPassword'>Forget Password</Link></h4>
                         <h4 className="text-btn text-sm"><Link href='/register'>Sign up </Link> <ArrowRightAltIcon/></h4>
                     </form>
+
+                    {isOpen && <Popup
+                      content={<>
+                        <h2 className='uppercase mb-3 text-lg'>Login</h2>
+                        <p>Welcome !!! You have successfully login</p>
+                      </>}
+                    />}
+
                </div>
+
+                  
            </div>
     </>
   )
