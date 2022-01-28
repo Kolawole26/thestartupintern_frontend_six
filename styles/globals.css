@@ -4,33 +4,6 @@
 @tailwind utilities;
 
 
-
-
-
-@layer base {
-    
-    footer {
-        @apply bg-secondary;
-        @apply py-7;
-        @apply px-9
-    }
-
-    header {
-        @apply bg-primary;
-        @apply relative;
-        @apply py-3
-    }
-    
-}
-
-@layer utilities {
-    
-    .nav {
-        @apply text-center;
-        @apply md:text-right;
-        @apply md:text-xl
-    }
-}
-        
+      
 
 /* purgecss end ignore */

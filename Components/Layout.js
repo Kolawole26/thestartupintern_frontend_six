@@ -6,7 +6,7 @@ function Layout({children}) {
     return (
         <>
             <Meta/>
-            <main >
+            <main>
                 {children}
             </main>
             <Footer />

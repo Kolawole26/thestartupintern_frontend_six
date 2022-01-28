@@ -78,7 +78,7 @@ function checkInputs() {
 
 
   return (
-  <Layout>
+  <Layout className="h-screen">
     <Navigation links={links} onClick={onClick} active={active} />
     <Component {...pageProps}  email={email} setEmail={setEmail} password={password} 
             setPassword={setPassword}  errorEmail={errorEmail} errorPassword={errorPassword} errorLogin={errorLogin}
