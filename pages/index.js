@@ -14,6 +14,21 @@ export default function Home({firstLinks, email, setEmail, password, setPassword
 
  });
 
+ useEffect(() => {
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function () {
+      OneSignal.init({
+          appId: "f0e3643b-1f82-4319-bd22-92bbdf71a525",
+      });
+  });
+
+  return () => {
+      window.OneSignal = undefined;
+  };
+}, []); // <-- run this effect once on mount
+
+ 
+
  const router = useRouter()
 
  const LoginSubmit = async (e) => {

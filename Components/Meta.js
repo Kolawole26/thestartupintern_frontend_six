@@ -10,6 +10,7 @@ function Meta({title}) {
     <meta charSet='utf-8' />
     <link rel='icon' href='/favicon.ico' />
     <title>{title}</title>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
     </Head>
 
 )};
