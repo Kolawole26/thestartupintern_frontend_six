@@ -44,8 +44,8 @@ function ForgotPassword({ errorForget, setErrorForget, email, setEmail, errorEma
 
                     {isOpenup && <ForgotPopup
                       content={<>
-                        <h2 className='uppercase mb-3 text-lg'>Forgot password</h2>
-                        <p>Token have been sent to your email!</p>
+                        <h2 className='uppercase mb-3 text-sm md:text-lg'>Forgot password</h2>
+                        <p className='text-sm md:text-lg'>Token have been sent to your email!</p>
                       </>}
                     />}
 

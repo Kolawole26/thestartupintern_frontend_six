@@ -68,8 +68,8 @@ function Register({firstLinks, fullname, setFullname, email, setEmail, password,
 
                     {isOpens && <Popups
                       content={<>
-                        <h2 className='uppercase mb-3 text-lg'>Register</h2>
-                        <p> You have successfully register</p>
+                        <h2 className='uppercase mb-3 text-sm md:text-lg'>Register</h2>
+                        <p className='text-sm md:text-lg'> You have successfully register</p>
                       </>}
                     />}
 

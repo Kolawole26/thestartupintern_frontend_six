@@ -85,8 +85,8 @@ const togglePopup = () => {
 
                     {isOpen && <Popup
                       content={<>
-                        <h2 className='uppercase mb-3 text-lg'>Login</h2>
-                        <p>Welcome !!! You have successfully login</p>
+                        <h2 className='uppercase mb-3 text-sm md:text-lg'>Login</h2>
+                        <p className='text-sm md:text-lg'>Welcome !!! You have successfully login</p>
                       </>}
                     />}
 
