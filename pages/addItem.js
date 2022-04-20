@@ -20,6 +20,8 @@ function AddItem({secondLinks, futureDate, title, details, setFutureDate, setTit
         setDateWarn(!dateWarn)
     }
 
+    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = Cookies.get('user')

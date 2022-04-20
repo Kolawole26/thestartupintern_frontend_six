@@ -12,6 +12,7 @@
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.2.1",
     "@mui/material": "^5.2.3",
+    "@sentry/nextjs": "^6.19.6",
     "axios": "^0.24.0",
     "cookie": "^0.4.1",
     "dateformat": "^5.0.2",

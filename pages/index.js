@@ -47,8 +47,10 @@ const togglePopup = () => {
     setErrorLogin("");
     togglePopup();
   } catch (err) {
+    
     console.log(`Error: ${err.message}`);
       setErrorLogin('Login failed, Please try again');
+      
   }
 
 }
@@ -89,6 +91,15 @@ const togglePopup = () => {
                         <p className='text-sm md:text-lg'>Welcome !!! You have successfully login</p>
                       </>}
                     />}
+
+<button
+  type="button"
+  onClick={() => {
+    throw new Error("Sentry Frontend Error");
+  }}
+>
+  Throw error
+</button>
 
                </div>
 
