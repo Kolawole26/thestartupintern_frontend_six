@@ -1,1 +1,1 @@
-View Live: https://smart-dudes.netlify.app
+View Live: https://sentry-testing.netlify.app
